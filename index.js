@@ -27,7 +27,7 @@ app.use([
     //   "https://task-management-frontend-bice.vercel.app",
     //   process.env.FRONTEND_DOMAIN,
     // ],
-    origin: process.env.FRONTEND_DOMAIN,
+    origin: [process.env.FRONTEND_DOMAIN, "http://localhost:3000"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
