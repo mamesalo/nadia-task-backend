@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5032;
 
 const app = express();
 
-// CORS, JSON and URL Encoded middleware
+// CORS, JSON and URL Encoded middlewaree
 app.use([
   cors({
     origin: "https://nado-managment.netlify.app",
