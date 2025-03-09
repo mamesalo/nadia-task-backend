@@ -22,21 +22,29 @@ const app = express();
 // CORS, JSON and URL Encoded middleware
 app.use([
   cors({
-    // origin: [
-    //   "http://localhost:3000",
-    //   "https://task-management-frontend-bice.vercel.app",
-    //   process.env.FRONTEND_DOMAIN,
-    // ],
-    // origin: "http://localhost:3000",
-    origin: "https://nadia-task-frontend.vercel.app",
     origin: "https://nado-managment.netlify.app",
-    credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
   express.json(),
   express.urlencoded({ extended: true }),
 ]);
+// app.use([
+//   cors({
+//     // origin: [
+//     //   "http://localhost:3000",
+//     //   "https://task-management-frontend-bice.vercel.app",
+//     //   process.env.FRONTEND_DOMAIN,
+//     // ],
+//     // origin: "http://localhost:3000",
+//     origin: "https://nadia-task-frontend.vercel.app",
+//     origin: "https://nado-managment.netlify.app",
+//     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//   }),
+//   express.json(),
+//   express.urlencoded({ extended: true }),
+// ]);
 
 // Session store configuration
 const sessionStore = MongoStore.create({
